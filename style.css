@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
 
-
-
 :root {
     --color-black: #262A2F;
     --color-orange: #FF5533;
@@ -10,11 +8,11 @@
     --bg-color-main: #E5E5E5;
 }
 
-* {
-    all: unset;
-    display: revert;
-  }
 
+* {
+    display: revert;
+    all: inherit
+  }
 
 body {
     font-family: 'Rubik', serif;
