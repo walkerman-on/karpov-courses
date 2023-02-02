@@ -48,12 +48,23 @@ body {
     cursor: pointer;
 }
 
+
 .navigation__link--active {
     color: var(--color-orange)
 }
 
+.footer__navigation .navigation__link {
+    color: var(--bg-color-main)
+}
+
+
 .navigation__link:hover {
     color: var(--color-orange)
+}
+
+
+.main {
+    padding-bottom: 145px;
 }
 
 .articles {
@@ -64,6 +75,18 @@ body {
 .main-article {
     display: flex;
     gap: 20px;
+}
+
+.articles__big-column {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.articles__small-column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .main-article__image-container {
@@ -91,6 +114,7 @@ body {
 .main-article__title {
     font-size: 42px;
     font-weight: 700;
+    line-height: 48px;
     color: var(--color-black);
     margin-bottom: 34px;
     display: -webkit-box;
@@ -100,7 +124,7 @@ body {
 }
 
 .main-article__text {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--color-black);
     margin-bottom: 36px;
@@ -110,9 +134,78 @@ body {
     overflow: hidden;
 }
 
-.main-article__source {
+.article-source {
     font-size: 20px;
     font-weight: 500;
     color: var(--color-gray);
     text-transform: uppercase;
+}
+
+.small-article {
+    border-left: 9px solid var(--color-black);
+    padding-left: 10px;
+}
+
+.small-article__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-date {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-orange)
+}
+
+.small-article__date {
+    margin-right: 10px;
+}
+
+.article-date + .article-source::before {
+    content: "·";
+    margin-right: 15px;
+}
+
+.footer {
+    background-color: var(--color-black);
+}
+
+
+.footer__navigation .navigation {
+    padding: 22px 0 47px 0;
+    align-items: center;
+    gap: 78px;
+}
+
+.footer__navigation .logo {
+    width: 164px;
+    height: 34px;
+}
+
+.footer__navigation .navigation__link--active {
+    color: var(--color-orange);
+}
+
+.footer__text {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-white)
+}
+
+.footer__link {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-orange);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__link:hover {
+    opacity: 0.7;
 }

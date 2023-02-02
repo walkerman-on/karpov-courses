@@ -8,38 +8,139 @@
     <title>News Feed 1.0</title>
 </head>
 <body>
-    <header class="header container">
-        <nav class="navigation">
-            <a href="#" class="navigation-logo">
-                <img src="/images/kc-logo.svg" alt="Логотип KC" class="logo">
-            </a>
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link navigation__link--active">Главная</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Мода</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Технологии</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Музыка</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Karpov</a></li>
-            </ul>
-        </nav>
+    <header class="header-navigation">
+        <div class="container">
+            <nav class="navigation">
+                <a href="#" class="navigation-logo">
+                    <img src="/images/kc-logo.svg" alt="Логотип KC" class="logo">
+                </a>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link navigation__link--active">Главная</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Мода</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Технологии</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Музыка</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Karpov</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class="main container">
-        <section class="articles">
-            <section class="articles__big-column">
-                <article class="main-article">
-                    <div class="main-article__image-container">
-                        <img src="/images/img-1.jpg" alt="Обложка статьи" class="main-article__image">
-                    </div>
-                    <div class="main-article__content">
-                        <span class="main-article__category">Технологии</span>
-                        <h2 class="main-article__title">Отец жанра. Как уже забытый трип-хоп определяет самую популярную</h2>
-                        <p class="main-article__text">Новая мода на топовые наряды необычных цветов. В сезоне – топики, шорты-боксеры, сланцы и сандалии. А также большие солнечные очки и яркая шляпка.</p>
-                        <span class="main-article__source">Источник</span>
-                    </div>
-                </article>
+    <main class="main">
+        <div class="container">
+            <section class="articles">
+                <section class="articles__big-column">
+                    <article class="main-article">
+                        <div class="main-article__image-container">
+                            <img src="/images/img-1.jpg" alt="Обложка статьи" class="main-article__image">
+                        </div>
+                        <div class="main-article__content">
+                            <span class="main-article__category">Технологии</span>
+                            <h2 class="main-article__title">Отец жанра. Как уже забытый трип-хоп определяет самую популярную</h2>
+                            <p class="main-article__text">Новая мода на топовые наряды необычных цветов. В сезоне – топики, шорты-боксеры, сланцы и сандалии. А также большие солнечные очки и яркая шляпка.</p>
+                            <span class="article-source main-article__source">Источник</span>
+                        </div>
+                    </article>
+    
+                    <article class="main-article">
+                        <div class="main-article__image-container">
+                            <img src="/images/img-3.jpg" alt="Обложка статьи" class="main-article__image">
+                        </div>
+                        <div class="main-article__content">
+                            <span class="main-article__category">Технологии</span>
+                            <h2 class="main-article__title">Как DJ Shadow попал в книгу рекордов Гиннеса из-за альбома</h2>
+                            <p class="main-article__text">Технологические тренды меняют наш привычный мир. Глобальные корпорации задают новые тренды айтишникам на разработку, а дизайнеров заставляю…</p>
+                            <span class="article-source main-article__source">Источник</span>
+                        </div>
+                    </article>
+    
+                    <article class="main-article">
+                        <div class="main-article__image-container">
+                            <img src="/images/img-2.jpg" alt="Обложка статьи" class="main-article__image">
+                        </div>
+                        <div class="main-article__content">
+                            <span class="main-article__category">Технологии</span>
+                            <h2 class="main-article__title">Вещи, которые нужно знать перед стажировкой в IT сфере</h2>
+                            <p class="main-article__text">Уличные музыканты продолжают радовать фанатов стрит арта. Для этого они исполняют привычные мелодии в новом формате!</p>
+                            <span class="article-source main-article__source">Источник</span>
+                        </div>
+                    </article>
+                </section>
+                <section class="articles__small-column">
+                    <article class="small-article">
+                        <h2 class="small-article__title">В американском зоопарке празднуют рождение гориллы: видео</h2>
+                        <span class="article-date small-article__date">12 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Новую популяцию синих китов обнаружили в Индийском океане</h2>
+                        <span class="article-date small-article__date">11 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Билл Гейтс уверен, что 2021 год будет лучше 2020-го. И вот почему</h2>
+                        <span class="article-date small-article__date">10 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Благотворительный забег с собаками: чем заняться на выходных в Москве</h2>
+                        <span class="article-date small-article__date">10 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Как начать год так, чтобы потом было приятно подводить итоги: чек-лист</h2>
+                        <span class="article-date small-article__date">9 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Как подготовиться к Новому году, все успеть и не нервничать</h2>
+                        <span class="article-date small-article__date">12 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Как выбирать и дарить подарки — новогодние и не только: чек-лист Esquire</h2>
+                        <span class="article-date small-article__date">11 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Мужчина из Франции завещал часть своего наследства котам из Эрмитажа</h2>
+                        <span class="article-date small-article__date">13 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+    
+                    <article class="small-article">
+                        <h2 class="small-article__title">Самое трогательное видео дня: котенок не мог забраться на крышу, но ему помогла другая…</h2>
+                        <span class="article-date small-article__date">14 июля</span>
+                        <span class="article-source small-article__source">Источник</span>
+                    </article>
+                </section>
             </section>
-            <section class="articles__small-column"></section>
-        </section>
+        </div>
     </main>
-    <footer class="footer container"></footer>
+    <footer class="footer">
+        <div class="container footer__navigation">
+            <nav class="navigation">
+                    <a href="#" class="navigation-logo">
+                        <img src="/images/kc-logo.svg" alt="Логотип KC" class="logo">
+                    </a>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link navigation__link--active">Главная</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Мода</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Технологии</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Музыка</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Karpov</a></li>
+                    </ul>
+            </nav>
+            <div class="footer__column">
+                <p class="footer__text">Сделано на Frontend курсе в <a href="https://karpov.courses/dev/frontend" class="footer__link">Karpov.Courses</a></p>
+                <p class="footer__copyright">© 2021</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
