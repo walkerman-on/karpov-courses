@@ -3,41 +3,69 @@ import data from "./data.json" assert {type: 'json'};
 const mainNews = data.items.slice(0,3)
 const smallNews = data.items.slice(3, 12)
 
-// ищем шаблоны новостей <template>
-const mainNewsTemplate = document.getElementById("main-news-item")
-const smallNewsTemplate = document.getElementById("small-news-item")
-
-// ищем куда вставить шаблоны
 const mainNewsContainer = document.querySelector('.articles__big-column')
 const smallNewsContainer = document.querySelector('.articles__small-column')
 
-// выводим новости - не очень хорошо, т.к. можем только один раз использовать
-// mainNewsContainer.appendChild(mainNewsTemplate.content) 
-// smallNewsContainer.appendChild(smallNewsTemplate.content)
+const escapeString = (item) => {
+    const symbols = {
+        "&": "&amp;",
+        "<": "&lt",
+        ">": "&gt",
+    };
 
-// выводим новости через цикл 
-mainNews.forEach ( item => {
-    const element = mainNewsTemplate.content.cloneNode(true);
+    return item.replace(/[&<>]/g, (tag) => {
+        return symbols[tag] || tag;
+    })
+}
+
+
+mainNews.forEach((item) => {
+    const template = document.createElement("template");
+
     const category = data.categories.find( (categoryItem) => categoryItem.id === item.category_id);
     const source = data.sources.find( (categoryItem) => categoryItem.id === item.source_id);
+    const image = item.image;
+    const title = item.title;
+    const articleText = item.description;
 
-    element.querySelector(".main-article__title").textContent = item.title;
-    element.querySelector(".main-article__text").textContent = item.description;
-    element.querySelector(".main-article__image").src = item.image;
-    element.querySelector(".main-article__category").textContent = category.name;
-    element.querySelector(".main-article__source").textContent = source.name;
+    template.innerHTML = `
+        <article class="main-article">
+            <div class="main-article__image-container">
+                <img src="${encodeURI(image)}" alt="Обложка статьи" class="main-article__image">
+            </div>
+            <div class="main-article__content">
+                <span class="main-article__category">${escapeString(category.name)}</span>
+                <h2 class="main-article__title">${escapeString(title)}</h2>
+                <p class="main-article__text">${escapeString(articleText)}</p>
+                <span class="article-source main-article__source">${escapeString(source.name)}</span>
+            </div>
+        </article>
+        `
 
-    mainNewsContainer.appendChild(element);
-});
+    mainNewsContainer.appendChild(template.content)
+})
 
-smallNews.forEach ( item => {
-    const element = smallNewsTemplate.content.cloneNode(true);
+smallNews.forEach((item) => {
+    const template = document.createElement("template");
+
+    const category = data.categories.find( (categoryItem) => categoryItem.id === item.category_id);
     const source = data.sources.find( (categoryItem) => categoryItem.id === item.source_id);
-    const date = new Date(item.date).toLocaleDateString('ru-RU', {month: "long", day: "numeric"})
+    const image = item.image;
+    const title = item.title;
+    const articleText = item.description;
+    const date = new Date (item.date).toLocaleDateString('ru-RU', {month: "long", day: "numeric"})
 
-    element.querySelector(".small-article__title").textContent = item.title;
-    element.querySelector(".small-article__source").textContent = source.name;
-    element.querySelector(".small-article__date").textContent = date;
+    template.innerHTML = `
+        <article class="small-article">
+            <h2 class="small-article__title">${escapeString(title)}</h2>
+            <span class="article-date small-article__date">${date}</span>
+            <span class="article-source small-article__source">${escapeString(source.name)}</span>
+        </article>
+        `
 
-    smallNewsContainer.appendChild(element);
-});
+    smallNewsContainer.appendChild(template.content)
+})
+
+
+
+
